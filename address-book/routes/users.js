@@ -3,7 +3,19 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('list');
+});
+
+router.get('/create', function(req, res, next) {
+   res.render('create');
+});
+
+router.post('/create', function(req, res, next) {
+   res.send('veri alındı');
+});
+
+router.get('/delete', function(req, res, next){
+   res.send('kullanıcı silindi');
 });
 
 module.exports = router;
