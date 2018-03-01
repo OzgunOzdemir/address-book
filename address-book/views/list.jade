@@ -1,0 +1,29 @@
+extends layout
+block content
+	div.container
+		div.content
+			div.row
+				h1 Kullanıcı Listesi
+			hr
+			div.row
+				table.table.table-hover.table-bordered
+					thead
+						tr
+							th Ad
+							th Soyad
+							th Telefon Numarası
+							th İşlem
+					tbody
+						tr
+							td Özgün
+							td Özdemir
+							td 05057838119
+							td
+								a.btn.btn-danger.btn-xs(
+								href="/users/delete/"
+								) Kullanıcıyı Sil
+				hr
+				div.row
+					div.col-md-12
+						a.btn.btn-default(
+						href="/users/create") Yeni Kullanıcı Ekle
