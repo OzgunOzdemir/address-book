@@ -14,16 +14,17 @@ block content
 							th Telefon Numarası
 							th İşlem
 					tbody
+						each user, i in userList
 						tr
-							td Özgün
-							td Özdemir
-							td 05057838119
+							td #{user.ad}
+							td #{user.soyad}
+							td #{user.telNo}
 							td
 								a.btn.btn-danger.btn-xs(
-								href="/users/delete/"
-								) Kullanıcıyı Sil
+								href='/users/delete/' +
+								user._id) Kullanıcıyı Sil
 				hr
 				div.row
 					div.col-md-12
-						a.btn.btn-default(
+						a.btn.btn-success(
 						href="/users/create") Yeni Kullanıcı Ekle

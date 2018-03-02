@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
 router.get('/', function(req, res, next) {
-  res.render('list');
+  User.find(function(error, users){
+      res.render('list', {userList: users});
+  });
 });
 
 router.get('/create', function(req, res, next) {
@@ -12,11 +14,20 @@ router.get('/create', function(req, res, next) {
 });
 
 router.post('/create', function(req, res, next) {
-   res.send('veri alındı');
+   new User({
+   	ad: req.body.ad,
+   	soyad: req.body.soyad,
+   	telNo: req.body.telno 
+   }).save(function(error, comment){
+      res.redirect('/users');
+   });
 });
 
-router.get('/delete', function(req, res, next){
-   res.send('kullanıcı silindi');
+router.get('/delete/:id', function(req, res, next){
+   User.findByIdAndRemove(req.params.id,
+      function (error, next) {
+         res.redirect('/users');
+      });
 });
 
 module.exports = router;
