@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var User = mongoose.model('User');
+var User = require('./db.js')
 
 router.get('/', function(req, res, next) {
   User.find(function(error, users){
