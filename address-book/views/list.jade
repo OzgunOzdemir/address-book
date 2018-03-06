@@ -15,14 +15,14 @@ block content
 							th İşlem
 					tbody
 						each user, i in userList
-						tr
-							td #{user.ad}
-							td #{user.soyad}
-							td #{user.telNo}
-							td
-								a.btn.btn-danger.btn-xs(
-								href='/users/delete/' +
-								user._id) Kullanıcıyı Sil
+							tr
+								td #{user.ad}
+								td #{user.soyad}
+								td #{user.telNo}
+								td
+									a.btn.btn-danger.btn-xs(
+									href='/users/delete/' +
+									user._id) Kullanıcıyı Sil
 				hr
 				div.row
 					div.col-md-12

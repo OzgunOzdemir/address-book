@@ -2,34 +2,34 @@ extends layout
 block content
 	div.container
 		div.content
-		 h1 Yeni Kullanıcı Oluştur
-		 hr
-		 form.form-horizontal(action='/users/create',
-		 method='POST')
-		 	div.form-group
-		 		label.col-sm-2.control-label(
-		 		for="ad-input") Ad
-		 		div.col-sm-10
-		 			input.form-control(
-		 			id="ad-input"
-		 			name="ad"
-		 			placeholder="Ad giriniz")
-		 	div.form-group
-		 		label.col-sm-2.control-label(
-		 		for="soyad-input") Soyad
-		 		div.col-sm-10
-		 			input.form-control(
-		 			id="soyad-input" name="soyad"
-		 			placeholder="Soyad giriniz")
-		 	div.form-group
-		 		label.col-sm-2.control-label(
-		 		for="telNo-input") Telefon Numarası
-		 		div.col-sm-10
-		 			input.form-control(
-		 			id="telNo-input"
-		 			name="telno"
-		 			placeholder="Telefon numarasını giriniz")
-		 	div.form-group
-		 		div.col-sm-offset-2.col-sm-10
-		 			button.btn.btn-primary(
-		 			type="submit") Kullanıcı ekle
+			h1 Yeni Kullanıcı Oluştur
+			hr
+			form.form-horizontal(action='/users/create',
+			method='POST')
+				div.form-group
+					label.col-sm-2.control-label(
+					for="ad-input") Ad
+					div.col-sm-10
+						input.form-control(
+						id="ad-input"
+						name="ad"
+						placeholder="Ad giriniz")
+				div.form-group
+					label.col-sm-2.control-label(
+					for="soyad-input") Soyad
+					div.col-sm-10
+						input.form-control(
+						id="soyad-input" name="soyad"
+						placeholder="Soyad giriniz")
+				div.form-group
+					label.col-sm-2.control-label(
+					for="telNo-input") Telefon Numarası
+					div.col-sm-10
+						input.form-control(
+						id="telNo-input"
+						name="telno"
+						placeholder="Telefon numarasını giriniz")
+				div.form-group
+					div.col-sm-offset-2.col-sm-10
+						button.btn.btn-primary(
+						type="submit") Kullanıcı ekle
